@@ -25,4 +25,3 @@ package basic_input_output
         }
         return true
     }
-}
