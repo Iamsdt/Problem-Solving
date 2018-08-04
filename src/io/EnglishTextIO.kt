@@ -7,6 +7,10 @@ import java.io.FileWriter
 word problem
 abbey - n. a monastery ruled by an abbot
 abide - v. dwell; inhabit or live in
+
+word - abbey
+type - n
+des - a monastery ruled by an abbot
  */
 
 fun main(args: Array<String>) {
@@ -16,6 +20,9 @@ fun main(args: Array<String>) {
         val path = "D:/Android/test/"
         val inputFile = File("$path$inputName")
         val outputFile = File("$path$outputName")
+
+        println(inputFile.exists())
+
         val gson = Gson()
 
         //create a list
@@ -29,7 +36,7 @@ fun main(args: Array<String>) {
                 }
                 stringBuilder.append(char)
             }
-            val word = stringBuilder.toString().trim()
+            var word = stringBuilder.toString().trim()
 
             //types
             val typesData = string.removePrefix("$word -").trim()
@@ -43,6 +50,10 @@ fun main(args: Array<String>) {
             val type = stringBuilder.toString().trim()
 
             val des = typesData.removePrefix("$type.").trim()
+
+            //capital first word
+            val cap = word[0].toUpperCase()
+            word = word.replaceFirst(word[0],cap)
 
             val model = Model(word,type,des)
             list.add(model)
