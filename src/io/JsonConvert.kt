@@ -4,19 +4,20 @@ import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import java.io.File
 import java.io.FileWriter
+import java.util.*
 
 /*
 Problem is remove a entry from json
 json {
-"word":"word1",
-"des":"description",
-"img"
-}
+        "word":"word1",
+        "des":"description",
+        "img":""
+    }
 
 Expected json
 {
-"word":"Word1",
-"des":"description",
+    "word":"Word1",
+    "des":"description",
 }
 
  */
@@ -24,8 +25,8 @@ Expected json
 
 fun main(args: Array<String>) {
     try {
-        val name = "Sample.json"
-        val output = "Output.json"
+        val name = "sample.json"
+        val output = "data.json"
         val path = "D:/Android/"
         val file = File("$path$name")
 
@@ -35,16 +36,19 @@ fun main(args: Array<String>) {
 
         val gson = Gson()
 
-        val data = gson.fromJson(file.bufferedReader(bufferSize = 4096), Pojo::class.java)
+        val data = gson.fromJson(file.bufferedReader(bufferSize = 4096),
+                Pojo::class.java)
 
         val list: ArrayList<NEW> = ArrayList()
         for (collection in data.collection) {
             var word = collection.word
             val des = collection.des
 
+            if (word.isEmpty()) continue
+
             //capital word
             val cap = word[0].toUpperCase()
-            word = word.replaceFirst(word[0],cap)
+            word = word.replaceFirst(word[0], cap)
 
             val newData = NEW(word, des)
             list.add(newData)
@@ -54,7 +58,9 @@ fun main(args: Array<String>) {
 
         println(list[95].word)
 
-        val string = gson.toJson(list)
+        val outputData = Output("favourite",Date().time,list)
+
+        val string = gson.toJson(outputData)
 
         val outputFile = File("$path$output")
         outputFile.createNewFile()
@@ -62,10 +68,18 @@ fun main(args: Array<String>) {
         writer.write(string)
         writer.close()
 
-        println("done from thread")
-
-
         println("Done")
+
+        println("Start opening recently closed file")
+        val jsonFile = File("$path$output")
+        println("File exists: ${jsonFile.exists()}")
+
+        val json = gson.fromJson(jsonFile.bufferedReader(bufferSize = 4096),
+                Output::class.java)
+
+        println("Type:${json.type}")
+        println("Date:${Date(json.date)}")
+        println("List size:${json.list.size}")
 
     } catch (e: Exception) {
         e.printStackTrace()
@@ -79,12 +93,17 @@ data class Pojo(
 )
 
 data class Collection(
-        @SerializedName("img") val img: String,
+        @SerializedName("word") val word: String,
         @SerializedName("des") val des: String,
-        @SerializedName("word") val word: String
-)
+        @SerializedName("img") val img: String)
 
 class NEW(
-        val word: String,
-        val des: String
+        @SerializedName("word") val word: String,
+        @SerializedName("des") val des: String
+
 )
+
+class Output(
+        @SerializedName("type") val type: String,
+        @SerializedName("date")val date: Long,
+        @SerializedName("list")val list: List<NEW>)
