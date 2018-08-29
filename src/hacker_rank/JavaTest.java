@@ -1,30 +1,37 @@
 package hacker_rank;
 
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class JavaTest {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        double payment = scanner.nextDouble();
-        scanner.close();
 
-        Locale indiaLocale = new Locale("en", "IN");
 
-        NumberFormat us     = NumberFormat.getCurrencyInstance(Locale.US);
-        NumberFormat india  = NumberFormat.getCurrencyInstance(indiaLocale);
-        NumberFormat china  = NumberFormat.getCurrencyInstance(Locale.CHINA);
-        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        String regex = "/* Write a RegEx matching repeated words here. */";
+        Pattern p = Pattern.compile(regex, Pattern.MULTILINE);
 
-        System.out.println("US: " + us.format(payment));
-        System.out.println("India: " + india.format(payment));
-        System.out.println("China: " + china.format(payment));
-        System.out.println("France: " + france.format(payment));
+        Scanner in = new Scanner(System.in);
+        int numSentences = Integer.parseInt(in.nextLine());
+
+        while (numSentences-- > 0) {
+            String input = in.nextLine();
+
+            Matcher m = p.matcher(input);
+
+            // Check for subsequences of input that match the compiled pattern
+            while (m.find()) {
+                input = input.replaceAll("","");
+            }
+
+            // Prints the modified sentence.
+            System.out.println(input);
+        }
+
+        in.close();
 
     }
-
 
 }
