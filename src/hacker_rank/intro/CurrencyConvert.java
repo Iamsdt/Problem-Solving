@@ -1,10 +1,10 @@
-package hacker_rank;
+package hacker_rank.intro;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
-class JavaTest {
+class CurrencyConvert {
 
     public static void main(String[] args) {
 
@@ -14,9 +14,9 @@ class JavaTest {
 
         Locale indiaLocale = new Locale("en", "IN");
 
-        NumberFormat us     = NumberFormat.getCurrencyInstance(Locale.US);
-        NumberFormat india  = NumberFormat.getCurrencyInstance(indiaLocale);
-        NumberFormat china  = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat india = NumberFormat.getCurrencyInstance(indiaLocale);
+        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
         NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
 
         System.out.println("US: " + us.format(payment));
@@ -25,6 +25,5 @@ class JavaTest {
         System.out.println("France: " + france.format(payment));
 
     }
-
 
 }
