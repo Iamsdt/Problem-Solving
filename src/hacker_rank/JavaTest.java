@@ -1,37 +1,28 @@
 package hacker_rank;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class JavaTest {
 
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-
-
-
-        String regex = "/* Write a RegEx matching repeated words here. */";
-        Pattern p = Pattern.compile(regex, Pattern.MULTILINE);
-
         Scanner in = new Scanner(System.in);
-        int numSentences = Integer.parseInt(in.nextLine());
+        int testCases = Integer.parseInt(in.nextLine());
+        while (testCases > 0) {
+            String pattern = in.nextLine();
 
-        while (numSentences-- > 0) {
-            String input = in.nextLine();
-
-            Matcher m = p.matcher(input);
-
-            // Check for subsequences of input that match the compiled pattern
-            while (m.find()) {
-                input = input.replaceAll("","");
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } catch (Exception e){
+                System.out.println("No Valid");
             }
 
-            // Prints the modified sentence.
-            System.out.println(input);
+
+
+            testCases++;
         }
-
-        in.close();
-
     }
-
 }
