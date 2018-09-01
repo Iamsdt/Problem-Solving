@@ -1,26 +1,16 @@
 package hacker_rank
 
-import java.util.*
-
 fun main(args: Array<String>) {
-    val scan = Scanner(System.`in`)
 
-    val meal_cost = scan.nextLine().trim().toDouble()
+    val n = readLine()?.trim()?.toInt() ?: 0
 
-    val tip_percent = scan.nextLine().trim().toInt()
+    when {
+        n % 2 != 0 -> println("Weird")
+        n in 2..5 -> println("Not Weird")
+        n in 6..20 -> println("Weird")
+        n > 20 -> println("Not Weird")
+    }
 
-    val tax_percent = scan.nextLine().trim().toInt()
+    main(emptyArray())
 
-    solve(meal_cost, tip_percent, tax_percent)
-}
-
-fun solve(meal_cost: Double, tip_percent: Int, tax_percent: Int): Unit {
-
-    val a = meal_cost * tip_percent / 100
-    val b = meal_cost * tax_percent / 100
-
-    val ans = meal_cost + a + b
-    val pay = Math.round(ans).toInt()
-
-    println("The total meal cost is $pay dollars.")
 }

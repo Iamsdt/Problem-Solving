@@ -1,9 +1,9 @@
-package hacker_rank;
+package hacker_rank.bigInteger;
 
 import java.math.BigInteger;
 import java.util.Scanner;
 
-class JavaTest {
+class JavaBigInteger {
 
     private static final Scanner scanner = new Scanner(System.in);
 
