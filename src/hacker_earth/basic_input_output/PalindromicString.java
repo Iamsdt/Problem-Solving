@@ -1,4 +1,4 @@
-package basic_input_output;
+package hacker_earth.basic_input_output;
 
 import java.util.Scanner;
 

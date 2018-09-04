@@ -1,4 +1,4 @@
-package implementation
+package hacker_earth.implementation
 
 fun main(args: Array<String>) {
     val i = readLine()!!.toInt()

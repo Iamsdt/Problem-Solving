@@ -1,4 +1,4 @@
-package basics_operators
+package hacker_earth.basics_operators
 
 import java.util.*
 

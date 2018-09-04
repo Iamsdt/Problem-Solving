@@ -1,4 +1,4 @@
-package math
+package hacker_earth.math
 
 fun main(args: Array<String>) {
 

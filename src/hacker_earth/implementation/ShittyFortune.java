@@ -1,4 +1,4 @@
-package implementation;
+package hacker_earth.implementation;
 
 import java.util.Scanner;
 

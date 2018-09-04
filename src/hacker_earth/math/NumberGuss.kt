@@ -1,4 +1,4 @@
-package math
+package hacker_earth.math
 
 /*
 Find the logic from the given sample input/output.
