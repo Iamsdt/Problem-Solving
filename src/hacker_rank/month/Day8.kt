@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
     for (n in 0 until time) {
         val key = readLine() ?: ""
         if (map.containsKey(key)){
-            println(map[key])
+            println("$key=${map[key]}")
         } else{
             println("Not found")
         }
