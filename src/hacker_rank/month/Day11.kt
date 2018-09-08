@@ -1,5 +1,4 @@
-package hacker_rank
-
+package hacker_rank.month
 
 fun main(args: Array<String>) {
 
@@ -7,7 +6,8 @@ fun main(args: Array<String>) {
 
     for (i in 0 until 6) {
         val s = readLine() ?: ""
-        arr[i] = s.split(" ").map { it.trim().toInt() }.toTypedArray()
+        arr[i] = s.split(" ")
+                .map { it.trim().toInt() }.toTypedArray()
     }
 
     // array with size 16
@@ -37,4 +37,3 @@ fun main(args: Array<String>) {
     //last value of the array
     println(sum[15])
 }
-
