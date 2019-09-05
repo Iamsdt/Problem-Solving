@@ -6,6 +6,7 @@ Solve problems in various platform.
 ## Languages
   1. Java
   2. Kotlin
+  3. Python
   
 ## Platforms
   1. [Hacker Earth](https://www.hackerearth.com/)
