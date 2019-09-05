@@ -25,3 +25,6 @@ hs_err_pid*
 HackerEarth-problems.iml
 lib/
 out/
+
+# remove all settings
+.idea
