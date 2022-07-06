@@ -6,11 +6,11 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        res = 0
+        carry = 0
         # add fake head
         head = current = ListNode(0)
         while l1 or l2:
-            val = res
+            val = carry
             if l1:
                 val += l1.val
                 l1 = l1.next
@@ -19,7 +19,7 @@ class Solution:
                 l2 = l2.next
             current.next = ListNode(val % 10)
             current = current.next
-            res = val // 10
-        if res > 0:
-            current.next = ListNode(res)
+            carry = val // 10
+        if carry > 0:
+            current.next = ListNode(carry)
         return head.next
