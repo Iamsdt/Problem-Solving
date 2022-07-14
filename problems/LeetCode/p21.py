@@ -1,10 +1,11 @@
 # Definition for singly-linked list.
+from typing import Optional
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-from multiprocessing import dummy
-from typing import Optional
 
 
 class Solution:
@@ -27,19 +28,17 @@ class Solution:
 
         elif list2:
             current.next = list2
-        
+
         return current.next
-
-
 
 
 if __name__ == '__main__':
     # begin
     s = Solution()
-    list1 = [2,4]
+    list1 = [2, 4]
     node1 = ListNode(val=1)
     for i in list1:
         node1.next = ListNode(val=1)
 
-    list2 = [1,3,4]
+    list2 = [1, 3, 4]
     print(s.mergeTwoLists([], []))
