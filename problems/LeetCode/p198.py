@@ -8,13 +8,10 @@ from pyparsing import List
 
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        ods = 0
-        even = 0
+        rob1, rob2 = 0, 0
+        for i in nums:
+            temp = max(rob1 + 1, rob2)
+            rob1 = rob2
+            rob2 = temp
 
-        for i, v in enumerate(nums):
-            if i % 2 == 0:
-                ods += v
-            else:
-                even += v
-        
-        return max(ods, even)
+        return rob2
