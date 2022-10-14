@@ -1,3 +1,5 @@
+
+# Hacking solution: But does't work in real world
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         if needle in haystack:
@@ -5,6 +7,10 @@ class Solution:
 
         return -1
 
+
+# Lets implement KMP (Knuth, morris and pratt)
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
 
 
 if __name__ == '__main__':
