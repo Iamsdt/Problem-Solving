@@ -7,10 +7,29 @@ class Solution:
 
         return -1
 
-
-# Lets implement KMP (Knuth, morris and pratt)
+# first approach
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
+        if not needle:
+            return 0
+
+        for i in range(len(haystack)+ 1 - len(needle)):
+            for j in range(len(needle)):
+                if haystack[i+j] != needle[j]:
+                    break
+                if j == len(needle) - 1:
+                    return i
+
+        return -1    
+
+    def strStr2(self, haystack: str, needle: str) -> int:
+        if not needle:
+            return 0
+
+        for i in range(len(haystack)+ 1 - len(needle)):
+            if haystack[i:i+len(needle)] == needle:
+                return i
+        return -1 
 
 
 if __name__ == '__main__':
