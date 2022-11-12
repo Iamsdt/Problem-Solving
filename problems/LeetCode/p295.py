@@ -20,9 +20,3 @@ class MedianFinder:
 # # obj = MedianFinder()
 # # obj.addNum(num)
 # # param_2 = obj.findMedian()
-
-if __name__ ==  '__main__':
-    a = 10
-    m = 15
-    t = 3
-    # 10, 20, 30, 
