@@ -14,7 +14,7 @@ class Solution:
         current = dummy
 
         while list1 and list2:
-            if list.val <= list2.val:
+            if list1.val <= list2.val:
                 current.next = list1
                 list1 = list1.next
             else:
@@ -29,7 +29,7 @@ class Solution:
         elif list2:
             current.next = list2
 
-        return current.next
+        return dummy.next
 
 
 if __name__ == '__main__':
