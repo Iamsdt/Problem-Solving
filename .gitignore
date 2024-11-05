@@ -28,3 +28,4 @@ out/
 
 # remove all settings
 .idea
+.vscode
