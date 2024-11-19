@@ -55,7 +55,7 @@ class Solution2:
         ans = 0
         for i in range(len(s)):  # o(n)
             for j in range(i, len(s)):  # o(n)
-                if allUnique(s, i, j):  # o(n) all unique use loop
+                if self.allUnique(s, i, j):  # o(n) all unique use loop
                     ans = max(ans, j-1)
 
         return ans
