@@ -1,41 +1,99 @@
 # Problem Solving
 
-Problem-solving practice project.
+A collection of data structures, algorithms, and competitive programming solutions in Python, Java, and Kotlin.
 
-Solve problems from various platforms.
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Languages](#languages)
+- [LeetCode Solutions](#leetcode-solutions)
+- [Data Structures & Algorithms](#data-structures--algorithms)
+- [Practice Platforms](#practice-platforms)
+- [Pandas Challenges](#pandas-challenges)
+- [Resources](#resources)
+
+## Project Structure
+
+```
+.
+├── ds_algo/               # Data structure & algorithm implementations
+│   ├── dp/                # Dynamic Programming
+│   ├── graph/             # Graph algorithms (BFS, etc.)
+│   ├── greedy/            # Greedy algorithms
+│   ├── linkedlist/        # Linked list implementations
+│   ├── recursion/         # Recursion problems
+│   ├── search/            # Search algorithms
+│   ├── sorting/           # Sorting algorithms
+│   └── tree/              # Binary tree implementations
+├── LeetCode/              # LeetCode solutions (Python) - 200+ problems
+│   ├── blind150/          # Blind 75/150 problems
+│   └── 60 days challenge/ # 60-day challenge (14 days)
+├── LeetCode-Java/         # LeetCode solutions (Java)
+├── pandas/                # LeetCode Pandas challenges
+└── problems/              # Problems from various platforms
+    ├── algoe/             # AlgoExpert problems
+    ├── course/            # Course-based problems
+    ├── CrackingCodingInt/ # Cracking the Coding Interview
+    ├── hacker_earth/      # HackerEarth solutions
+    └── hacker_rank/       # HackerRank solutions
+```
 
 ## Languages
 
-1. Python
-2. Java
-3. Kotlin
+| Language | File Count |
+|----------|------------|
+| Python   | ~350       |
+| Java     | ~53        |
+| Kotlin   | 1          |
 
-## Sections
+## LeetCode Solutions
 
-### Leetcode Blind 75
+200+ problems solved in Python, with select problems also solved in Java.
 
-A curated list of 75 Leetcode problems that cover a wide range of topics and are frequently asked in interviews.
+### Categories
 
-### Searching and Sorting
+- **Blind 75/150** — Curated list of frequently asked interview questions (`LeetCode/blind150/`)
+- **60-Day Challenge** — Structured daily challenge spanning 14 days (`LeetCode/60 days challenge/`)
+- **By Topic** — Problems organized by number across arrays, trees, linked lists, graphs, DP, binary search, strings, and more
 
-Problems related to searching and sorting algorithms.
+### Java Solutions
 
-### Other Data Structures and Algorithms
+13 problems solved in Java covering Two Sum, 3Sum, Container With Most Water, Valid Parentheses, Merge Two Sorted Lists, and others in `LeetCode-Java/`.
 
-Problems covering various data structures and algorithms.
+## Data Structures & Algorithms
 
-### Pandas Challenges
+Implementations in Python under `ds_algo/`:
 
-Challenges and exercises to practice data manipulation using the Pandas library.
+| Category       | Topics                                                       |
+|----------------|--------------------------------------------------------------|
+| Sorting        | Bubble, Insertion, Selection, Merge, Quick, Counting        |
+| Graph          | BFS, disconnected graph traversal                           |
+| Dynamic Prog.  | 0/1 Knapsack (memoization & tabular), Fibonacci             |
+| Tree           | Binary tree traversals and operations                       |
+| Linked List    | Single, double, circular linked lists                       |
+| Greedy         | Fractional Knapsack, minimum coins, N meetings              |
+| Search         | Ternary search                                              |
+| Recursion      | Sort array, reverse stack                                   |
+| Basic DS       | Stack, Queue, Dequeue                                       |
 
-### Implementations
+## Practice Platforms
 
-Implementations of different data structures and problems from:
+### HackerRank
+Problems across Java intro, strings, data structures, and 30 Days of Code challenges.
 
-- HackerEarth
-- HackerRank
-- Leetcode
+### HackerEarth
+Solutions for basic I/O, math, operators, and implementation problems.
 
-You can find the list of Leetcode problems, along with their numbers, titles, notes, Python solutions, and Java solutions in the following Google Sheet:
+### AlgoExpert
+Easy-level problems including Two Number Sum, Valid Subsequence, Tournament Winner, Sorted Squared Array, and Non-Constructible Change.
 
-[Leetcode Problems - Google Sheet](https://docs.google.com/spreadsheets/d/12Bc5Ksi_bSpdi4aZ5s5PrJYyH-PNJAeeGIz497xb3Pw/edit?usp=sharing)
+### Cracking the Coding Interview
+Array and string problems including Is Unique.
+
+## Pandas Challenges
+
+28 LeetCode Pandas problems solved using Python's pandas library in `pandas/`.
+
+## Resources
+
+- [LeetCode Problems Tracker (Google Sheet)](https://docs.google.com/spreadsheets/d/12Bc5Ksi_bSpdi4aZ5s5PrJYyH-PNJAeeGIz497xb3Pw/edit?usp=sharing)
